@@ -29,7 +29,6 @@ cudaError_t AddKernelContext::launch(const AddKernelParams& params, cudaStream_t
       const_cast<void*>(static_cast<const void*>(&global_scratch)),
   };
   dim3 grid = grid_calculator(params);
-  std::cout << "Before invoke a kernel" << std::endl;
   return params.selected_kernel->invoke("add_kernel", grid, args, stream);
 }
 

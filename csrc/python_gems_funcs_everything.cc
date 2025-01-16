@@ -14,7 +14,7 @@ Wrapper for pointwise & reduction maybe codegen
 namespace flaggems::py {
 
 void inline add(const at::Tensor& self, const at::Tensor& other, const at::Scalar& alpha) {
-  std::cout << "FLAG GEMS ADD" << std::endl;  // use glog change cout into VLOG(1)
+  LOG(INFO) << "FLAG GEMS ADD";  // use glog change cout into VLOG(1)
   // impl::add_impl(const at::Tensor& self, const at::Tensor& other, const at::Scalar& alpha)
 }
 
@@ -22,7 +22,7 @@ inline at::Tensor& add_out(at::Tensor& out,
                            const at::Tensor& self,
                            const at::Tensor& other,
                            const at::Scalar& alpha = 1) {
-  std::cout << "FLAG GEMS ADD OUT" << std::endl;  // dito
+  LOG(INFO) << "FLAG GEMS ADD OUT";
   // May use Macros to regester a kernel
   flaggems::impl::add_out_impl(out, self, other, alpha);
   return out;

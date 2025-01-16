@@ -10,4 +10,8 @@ Currerntly a todo list:
 
 - Add flaggems kernels && flash attention kernels
 
-- dd third party gtest and glog
+- ~~Add third party gtest and glog~~
+
+Done:
+
+- use torch LOG, ENV : `TORCH_CPP_LOG_LEVEL=INFO`

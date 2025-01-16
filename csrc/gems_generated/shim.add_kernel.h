@@ -3,13 +3,14 @@
 #pragma once
 
 #include <ATen/core/TensorBody.h>
+#include <c10/util/Logging.h>
 #include <functional>
 #include <string>
 // #include <aotriton/dtypes.h>
 // #include <aotriton/flash.h>
 // #include <aotriton/pointwise.h>
-#include "../include//runtime.h"
 #include "../include/_internal/triton_kernel.h"
+#include "../include/runtime.h"
 #include "../utils/device_utils.h"
 
 namespace flaggems::shim {
